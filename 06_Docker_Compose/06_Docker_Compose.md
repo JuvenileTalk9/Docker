@@ -280,7 +280,7 @@ MySQLのイメージは既にダウンロードされているため、再度ダ
 ```sh
 $ docker exec -it mysql bash
 [root@1aeb5076fad1\] mysql -u root -p -h 127.0.0.1
-Enter password:   # <- docker-compose.ymlで指定したルートユーザのパスワードを入力する
+Enter password:    # <- docker-compose.ymlで指定したルートユーザのパスワードを入力する
 
 mysql> USE sample;
 mysql> SELECT * FROM users;

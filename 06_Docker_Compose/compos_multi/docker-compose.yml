@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+    webapp:
+        container_name: webapp
+        build: ./webapp/
+        image: webapp
+        ports:
+            - 8888:80
+        volumes:
+            - ./webapp/:/usr/local/apache2/htdocs/
+    
+    db:
+        container_name: mysql
+        image: mysql:latest
+        volumes:
+            - ./db/:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: mysql

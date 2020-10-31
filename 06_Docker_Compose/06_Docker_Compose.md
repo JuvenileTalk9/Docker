@@ -24,7 +24,7 @@ docker-compose version 1.25.5, build 8a1c60f6
 ```
 
 ## 単一のコンテナを実行する
-[Webアプリケーション](https://github.com/JuvenileTalk9/artemis/blob/master/04_Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.md)の章で作った次の実行例と同じものをdocker-composeで作成します。
+[Webアプリケーション](https://github.com/JuvenileTalk9/Docker/blob/main/04_Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.md)の章で作った次の実行例と同じものをdocker-composeで作成します。
 
 ```sh
 $ docker run --name app -p 8888:80 --mount type=bind,src=`pwd`,dst=/usr/local/apache2/htdocs/ -d webapp
@@ -60,7 +60,7 @@ services:
 
 ```container_name```は、作成されるDockerコンテナの名前を指定します。ここではappを指定しました。
 
-```image```は、コンテナのもととなるDockerイメージを指定します。ここでは、[Webアプリケーション](https://github.com/JuvenileTalk9/artemis/blob/master/04_Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.md)の章で作成した```webapp```イメージを指定しています。
+```image```は、コンテナのもととなるDockerイメージを指定します。ここでは、[Webアプリケーション](https://github.com/JuvenileTalk9/Docker/blob/main/04_Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.md)の章で作成した```webapp```イメージを指定しています。
 
 ```ports```は、ポートフォワーディングのリストを記述します。ここではホスト側8888ポートをコンテナ側の80ポートに転送します。
 
@@ -294,4 +294,4 @@ mysql> SELECT * FROM users;
 
 以上
 
-[目次へ戻る](https://github.com/JuvenileTalk9/artemis)
+[目次へ戻る](https://github.com/JuvenileTalk9/Docker)
